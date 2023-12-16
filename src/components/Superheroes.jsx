@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { SimpleGrid, Stack } from "@chakra-ui/react";
-import Superhero from "../components/Superhero";
+import Superhero from "../Components/Superhero";
 
 const API = import.meta.env.VITE_API_URL;
 

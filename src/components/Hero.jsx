@@ -20,8 +20,8 @@ function Hero() {
 			}
 			filter='auto'
 			backgroundRepeat={"no-repeat"}
-			backgroundSize={"cover"}
-			backgroundPosition={"center center"}>
+			backgroundSize={"initial"}
+			backgroundPosition={"center"}>
 			<VStack
 				w={"full"}
 				justify={"center"}

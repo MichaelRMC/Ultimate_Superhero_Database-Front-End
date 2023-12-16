@@ -9,9 +9,7 @@ function SuperheroEditForm() {
 	console.log(id)
 	const navigate = useNavigate();
 
-	const [name, setName] = useState("");
-	const [image, setImage] = useState("");
-	const [connections, setConnections] = useState("");
+
 	const [superhero, setSuperhero] = useState({
 		name: "",
 		image: "",
@@ -23,13 +21,13 @@ function SuperheroEditForm() {
 	const handleNameChange = ( e ) =>
 	{
 		console.log(e.target)
-		setName({ ...superhero, [e.target.id]: e.target.value });
+		setSuperhero({ ...superhero, name: e.target.value });
 	};
 	const handleImageChange = (e) => {
-		setImage({ ...superhero, [e.target.id]: e.target.value });
+		setSuperhero({ ...superhero, image: e.target.value });
 	};
 	const handleConnectionsChange = (e) => {
-		setConnections({ ...superhero, [e.target.id]: e.target.value });
+		setSuperhero({ ...superhero, connections: e.target.value });
 	};
 
 	useEffect(() => {
@@ -49,7 +47,7 @@ function SuperheroEditForm() {
 	const updateSuperhero = () => {
 		fetch(`${API}/superhero/${id}`, httpOptions)
 			.then(() => {
-				alert(`${name} has been updated!`);
+				alert(`${superhero.name} has been updated!`);
 				navigate(`/superhero/${id}`);
 			})
 			.catch((error) => console.error(error));

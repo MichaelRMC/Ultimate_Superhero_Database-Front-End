@@ -1,6 +1,6 @@
 import React from "react";
-import NavBar from "../components/NavBar";
-import SuperheroEditForm from "../components/SuperheroEditForm";
+import NavBar from "../Components/NavBar";
+import SuperheroEditForm from "../Components/SuperheroEditForm";
 
 function EditSuperhero() {
 	return (

@@ -1,6 +1,6 @@
 import React from "react";
-import NavBar from "../components/NavBar";
-import SuperheroInfo from "../components/SuperheroInfo";
+import NavBar from "../Components/NavBar";
+import SuperheroInfo from "../Components/SuperheroInfo";
 function SuperheroDetails() {
 	return (
 		<div>

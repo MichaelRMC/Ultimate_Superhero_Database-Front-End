@@ -25,8 +25,6 @@ import
 const API = import.meta.env.VITE_API_URL;
 function SuperheroInfo() {
 	const [ superhero, setSuperhero ] = useState( [] );
-	const { isOpen, onOpen, onClose } = useDisclosure();
-	const cancelRef = useRef();
 
 	const { id } = useParams();
 	console.log( id );
