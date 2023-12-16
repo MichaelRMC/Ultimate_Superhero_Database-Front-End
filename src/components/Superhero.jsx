@@ -10,7 +10,7 @@ function Superhero ( { superhero } )
 			<Card maxW='sm' align='center' variant='elevated' bgColor='#838B91' boxShadow='dark-lg'>
 				<CardBody>
 					<Heading size='md'>{id}</Heading>
-					<Image src={image} alt={name} borderRadius='lg' />
+					<Image src={image} alt={name} borderRadius='lg' objectFit='fill' aspectRatio='2/3' />
 					<Text>{name}</Text>
 				</CardBody>
 			</Card>

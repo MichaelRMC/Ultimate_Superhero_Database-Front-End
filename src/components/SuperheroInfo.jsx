@@ -34,7 +34,7 @@ function SuperheroInfo() {
 		fetch(`${API}/superhero/${id}`)
 			.then( ( response ) => response.json())
 			.then((superhero) => {
-				console.log(superhero);
+				console.log( superhero );
 				setSuperhero(superhero);
 			})
 			.catch(() => {
@@ -68,20 +68,23 @@ function SuperheroInfo() {
 			colorScheme='#838B91'>
 			<Image
 				objectFit='cover'
-				maxW={{ base: "100%", sm: "200px" }}
+				aspectRatio='16/9'
 				src={superhero.image}
 				alt={superhero.name}
 				borderRadius='lg'
 			/>
 			<Stack>
-				<CardBody>
-					<Heading size='lg'>{id}</Heading>
-					<Text fontSize='md'>{superhero.name}</Text>
-					<Text fontStyle='oblique 23deg'>{superhero.fullName}</Text>
-					<Text fontSize='sm'>Location: {superhero.location}</Text>
+				<CardBody textAlign='center' paddingY={4}>
+					<Heading
+						size='lg'
+						textDecoration='underline'>
+						{id}
+					</Heading>
+					<Heading size='md'>{superhero.name}</Heading>
+					<Text fontStyle='italic'>{superhero.fullname}</Text>
 					<TableContainer>
+						<Heading size='sm' fontWeight='700' textDecoration='underline'>Power Stats:</Heading>
 						<Table variant='striped' colorScheme='cyan'>
-							<TableCaption placement='top'>Power Stats:</TableCaption>
 							<Thead>
 								<Tr>
 									<Th>Intelligence</Th>
