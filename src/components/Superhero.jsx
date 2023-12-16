@@ -7,7 +7,7 @@ function Superhero ( { superhero } )
 	const {id, image, name} = superhero
 	return (
 		<Link to={`/superhero/${id}`}>
-			<Card maxW='sm' align='center' variant='elevated' bgColor='#838B91'>
+			<Card maxW='sm' align='center' variant='elevated' bgColor='#838B91' boxShadow='dark-lg'>
 				<CardBody>
 					<Heading size='md'>{id}</Heading>
 					<Image src={image} alt={name} borderRadius='lg' />

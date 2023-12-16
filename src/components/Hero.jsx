@@ -14,19 +14,19 @@ function Hero() {
 	return (
 		<SimpleGrid
 			w={"full"}
-			h={"100vh"}
+			minH={"100vh"}
 			backgroundImage={
 				"url('https://www.hollywoodreporter.com/wp-content/uploads/2016/05/140342_group_01r1-h_2016.jpg?w=3000')"
 			}
 			filter='auto'
 			backgroundRepeat={"no-repeat"}
-			backgroundSize={"initial"}
-			backgroundPosition={"center"}>
+			backgroundSize={"cover"}
+			backgroundPosition={"center center"}>
 			<VStack
 				w={"full"}
 				justify={"center"}
 				px={useBreakpointValue({ base: 4, md: 8 })}>
-				<Stack maxW={"2xl"} align={"flex-start"} spacing={6}>
+				<Stack maxW={"2xl"} align={"center"} spacing={6}>
 					<Center>
 						<Heading
 							as='h1'

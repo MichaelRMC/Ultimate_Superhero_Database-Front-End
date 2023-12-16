@@ -18,11 +18,9 @@ const [superheroes, setSuperheroes] = useState(null);
 
 	return (
 		<SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
-			<Stack>
-				{superheroes?.map((superhero, id) => {
+		{superheroes?.map((superhero, id) => {
 					return <Superhero key={id} superhero={superhero} id={id} />;
 				})}
-			</Stack>
 		</SimpleGrid>
 	);
 }

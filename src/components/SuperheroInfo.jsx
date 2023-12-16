@@ -77,7 +77,7 @@ function SuperheroInfo() {
 				<CardBody>
 					<Heading size='lg'>{id}</Heading>
 					<Text fontSize='md'>{superhero.name}</Text>
-					<Text fontStyle='italic'>{superhero.fullName}</Text>
+					<Text fontStyle='oblique 23deg'>{superhero.fullName}</Text>
 					<Text fontSize='sm'>Location: {superhero.location}</Text>
 					<TableContainer>
 						<Table variant='striped' colorScheme='cyan'>
@@ -119,7 +119,7 @@ function SuperheroInfo() {
 						</Button>
 					</ButtonGroup>
 				</CardFooter>
-							</Stack>
+			</Stack>
 		</Card>
 	);
 }
