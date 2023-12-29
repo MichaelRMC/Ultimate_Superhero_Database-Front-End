@@ -15,7 +15,7 @@ function NavBar() {
 				</Heading>
 			</Link>
 			<Link to='/superhero/new'>
-				<Button colorScheme='blue' float='right'>
+				<Button colorScheme='blue' float='right' position='sticky'>
 					New Superhero
 				</Button>
 			</Link>

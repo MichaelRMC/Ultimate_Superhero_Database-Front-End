@@ -75,9 +75,7 @@ function SuperheroInfo() {
 			/>
 			<Stack>
 				<CardBody textAlign='center' paddingY={4}>
-					<Heading
-						size='lg'
-						textDecoration='underline'>
+					<Heading size='lg'>
 						{id}
 					</Heading>
 					<Heading size='md'>{superhero.name}</Heading>

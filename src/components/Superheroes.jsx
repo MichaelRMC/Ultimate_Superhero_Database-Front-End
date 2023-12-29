@@ -17,7 +17,7 @@ const [superheroes, setSuperheroes] = useState(null);
 	}, []);
 
 	return (
-		<SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
+		<SimpleGrid height='100%'  templateRows='(repeat(auto-fi, 1fr))' templateColumns='repeat(4, 0.25fr)'>
 		{superheroes?.map((superhero, id) => {
 					return <Superhero key={id} superhero={superhero} id={id} />;
 				})}
