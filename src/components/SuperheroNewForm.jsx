@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Input, Text, Button } from "@chakra-ui/react";
+import { Center, Input, Text, Button } from "@chakra-ui/react";
 
 const API = import.meta.env.VITE_API_URL;
 
@@ -53,14 +53,19 @@ function SuperheroNewForm() {
 	return (
 		<div>
 			<form className='add-superhero-form' onSubmit={handleSubmit}>
-				<Text mb='8px'>Image: {superhero.image}</Text>
+				<Center>
+					<Text mb='8px'>Image: {superhero.image}</Text>
+				</Center>
 				<Input
 					value={superhero.image}
 					onChange={handleImageChange}
 					placeholder='.jpeg, .png, .webp, etc.'
+					textAlign='center'
 				/>
 				<br />
-				<Text mb='8px'>Superhero Name: {superhero.name}</Text>
+				<Center>
+					<Text mb='8px'>Superhero Name: {superhero.name}</Text>
+				</Center>
 				<Input
 					value={superhero.name}
 					onChange={handleNameChange}
@@ -68,17 +73,24 @@ function SuperheroNewForm() {
 					isInvalid
 					errorBorderColor='crimson'
 					isRequired
+					textAlign='center'
 				/>
-				<Text mb='8px'>Connections: {superhero.connections}</Text>
+				<Center>
+					<Text mb='8px'>Connections: {superhero.connections}</Text>
+				</Center>
 				<Input
 					value={superhero.connections}
 					onChange={handleConnectionsChange}
 					placeholder='Avengers, Justice League, Young Avengers, Teen Titans, etc.'
+					textAlign='center'
 				/>
 				<br />
-				<Button colorScheme='blue' type='submit'>
-					Submit
-				</Button>
+				<br />
+				<Center>
+					<Button colorScheme='blue' type='submit'>
+						Submit
+					</Button>
+				</Center>
 			</form>
 		</div>
 	);

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { Button, Input, Text } from "@chakra-ui/react";
+import { Center, Button, Input, Text } from "@chakra-ui/react";
 
 const API = import.meta.env.VITE_API_URL;
 
@@ -8,8 +8,6 @@ function SuperheroEditForm() {
 	const { id } = useParams();
 	console.log(id)
 	const navigate = useNavigate();
-
-
 	const [superhero, setSuperhero] = useState({
 		name: "",
 		image: "",
@@ -59,15 +57,20 @@ function SuperheroEditForm() {
 	};
 	return (
 		<div>
-			<form className='add-superhero-form' onSubmit={handleSubmit}>
-				<Text mb='8px'>Image: {superhero.image}</Text>
+			<form className='edit-superhero-form' onSubmit={handleSubmit}>
+				<Center>
+					<Text mb='8px'>Image: {superhero.image}</Text>
+				</Center>
 				<Input
 					value={superhero.image}
 					onChange={handleImageChange}
 					placeholder='mysite'
+					textAlign='center'
 				/>
 				<br />
-				<Text mb='8px'>Superhero Name: {superhero.name}</Text>
+				<Center>
+					<Text mb='8px'>Superhero Name: {superhero.name}</Text>
+				</Center>
 				<Input
 					value={superhero.name}
 					onChange={handleNameChange}
@@ -75,22 +78,31 @@ function SuperheroEditForm() {
 					isInvalid
 					errorBorderColor='crimson'
 					isRequired
+					textAlign='center'
 				/>
 				<br />
-				<Text mb='8px'>Connections: {superhero.connections}</Text>
+				<Center>
+					<Text mb='8px'>Connections: {superhero.connections}</Text>
+				</Center>
 				<Input
 					value={superhero.connections}
 					onChange={handleConnectionsChange}
 					placeholder='Avengers, Justice League, Young Avengers, Teen Titans, etc.'
+					textAlign='center'
 				/>
 				<br />
-				<Button colorScheme='blue' type='submit'>
-					Submit
-				</Button>
+				<br />
+				<Center>
+					<Button colorScheme='blue' type='submit'>
+						Submit
+					</Button>
+				</Center>
 			</form>
-			<Link to={`/superhero/${id}`}>
-				<Button colorScheme='teal'>Back</Button>
-			</Link>
+			<Center>
+				<Link to={`/superhero/${id}`}>
+					<Button colorScheme='teal'>Back</Button>
+				</Link>
+			</Center>
 		</div>
 	);
 }
