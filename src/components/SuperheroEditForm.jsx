@@ -6,24 +6,22 @@ const API = import.meta.env.VITE_API_URL;
 
 function SuperheroEditForm() {
 	const { id } = useParams();
-	console.log(id)
+	console.log(id);
 	const navigate = useNavigate();
 	const [superhero, setSuperhero] = useState({
 		name: "",
 		image: "",
 		connections: "",
-	} );
-	
-	
+	});
 
-	const handleNameChange = ( e ) =>
-	{
-		console.log(e.target)
-		setSuperhero({ ...superhero, name: e.target.value });
-	};
 	const handleImageChange = (e) => {
+		console.log(e.target);
 		setSuperhero({ ...superhero, image: e.target.value });
+
 	};
+	const handleNameChange = (e) => {
+			setSuperhero({ ...superhero, name: e.target.value });
+		};
 	const handleConnectionsChange = (e) => {
 		setSuperhero({ ...superhero, connections: e.target.value });
 	};
@@ -44,9 +42,8 @@ function SuperheroEditForm() {
 	};
 	const updateSuperhero = () => {
 		fetch(`${API}/superhero/${id}`, httpOptions)
-			.then(() => {
-				alert(`${superhero.name} has been updated!`);
-				navigate(`/superhero/${id}`);
+			.then(() => { 
+				navigate(`${API}/superhero/${id}`);
 			})
 			.catch((error) => console.error(error));
 	};
@@ -64,7 +61,7 @@ function SuperheroEditForm() {
 				<Input
 					value={superhero.image}
 					onChange={handleImageChange}
-					placeholder='mysite'
+					placeholder='.jpeg, .png, .webp, etc.'
 					textAlign='center'
 				/>
 				<br />

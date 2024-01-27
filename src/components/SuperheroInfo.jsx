@@ -23,6 +23,7 @@ import
 } from "@chakra-ui/react";
 
 const API = import.meta.env.VITE_API_URL;
+
 function SuperheroInfo() {
 	const [ superhero, setSuperhero ] = useState( [] );
 
