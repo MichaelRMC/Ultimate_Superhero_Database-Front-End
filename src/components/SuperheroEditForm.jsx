@@ -43,7 +43,7 @@ function SuperheroEditForm() {
 	const updateSuperhero = () => {
 		fetch(`${API}/superhero/${id}`, httpOptions)
 			.then(() => { 
-				navigate(`${API}/superhero/${id}`);
+				navigate(`/superhero/${id}`);
 			})
 			.catch((error) => console.error(error));
 	};
